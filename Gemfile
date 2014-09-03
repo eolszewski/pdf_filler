@@ -49,8 +49,8 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'aws-sdk'
 gem 'paperclip'
-gem 'wkhtmltopdf-binary'
-gem 'wicked_pdf'
+gem 'pdftk'
+gem 'pdf-forms'
 
 
 

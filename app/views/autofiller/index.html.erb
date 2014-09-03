@@ -1,0 +1,8 @@
+<h3> All User Data </h3>
+
+
+<% @users.each do |user| %>
+  <%= link_to user.name, autofiller_path(user.id, :format => :pdf)%>
+  <br/>
+<% end %>
+
