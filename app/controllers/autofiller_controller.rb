@@ -25,10 +25,9 @@ class AutofillerController < ApplicationController
   #   end
   # end
 
-
-
   def index
     @users = User.all
+    form1 = PdfForm1.new(User.new)    
   end
 
 

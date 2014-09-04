@@ -7,8 +7,9 @@ class FillablePdfForm
     fill_out
   end
 
-  def export(output_file_path=nil)
-    output_path = output_file_path || "#{Rails.root}/tmp/pdfs/#{SecureRandom.uuid}.pdf" # make sure tmp/pdfs exists
+  def export(output_file_name=nil)
+    #output_path = output_file_path || "#{Rails.root}/tmp/pdfs/#{SecureRandom.uuid}.pdf" # make sure tmp/pdfs exists
+    output_path = "#{Rails.root}/tmp/pdfs/" + (output_file_name  || "#{SecureRandom.uuid}.pdf") # make sure tmp/pdfs exists
     pdftk.fill_form template_path, output_path, attributes
     output_path
   end
