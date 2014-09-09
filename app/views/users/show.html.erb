@@ -1,0 +1,38 @@
+<h3> User Information</h3>
+
+<div class="content">
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label">Name:  <%= @user.name %></label>      
+    </div>
+    <div class="form-group">
+      <label class="control-label">Address: <%= @user.address %> </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Birthday: <%= @user.date_of_birth %> </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label">US Citizon: <%= @user.us_citizon == 'default-value-0'  ? 'Yes' : 'No' %> </label>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">Item A: <%= @user.is_item_a ? 'Yes' : 'No' %> </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Item B: <%= @user.is_item_b ? 'Yes' : 'No' %> </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Item C: <%= @user.is_item_c ? 'Yes' : 'No' %> </label>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">Country: <%= @user.country %> </label>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Combo Box: <%= @user.combobox %> </label>
+    </div>
+
+  </div>
+  <%= link_to 'Back', users_path, class: 'btn btn-default' %>
+
+</div>

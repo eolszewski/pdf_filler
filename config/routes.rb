@@ -7,6 +7,6 @@ PdfFiller::Application.routes.draw do
 
 
   resources :autofiller
-
+  resources :users
 
 end

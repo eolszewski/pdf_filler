@@ -1,0 +1,47 @@
+<%= form_for(@user, html: { class: 'form-horizontal' }) do |f| %>
+  
+  <div class="form-group">
+    <label >Name</label>
+    
+    <%= f.text_field :name, class: 'form-control' %>
+    
+  </div>
+  <div class="form-group">
+    <label >Address</label>
+    <%= f.text_field :address, class: 'form-control col-sm-12' %> 
+  </div>
+  <div class="form-group">
+    <label >Date of birth</label>
+    <%= f.text_field :date_of_birth, class: 'form-control col-sm-12', placeholder: '' %> 
+  </div>
+  <div class="form-group">
+    <label>US Citizon</label>
+    <%= f.radio_button :us_citizon, 'default-value-0' %> Yes
+    <%= f.radio_button :us_citizon, 'default-value-1' %> No
+  </div>
+  <div class="form-group">
+    <label > Mark all that apply</label>
+  </div>
+  <div class="form-group col-sm-offset-3">
+    <div class="col-sm-offset-1">
+      Item A    <%= f.check_box :is_item_a %> <br/>
+      Item B    <%= f.check_box :is_item_b %> <br/>
+      Item C    <%= f.check_box :is_item_c %> <br/>
+    </div>  
+  </div>
+
+  <div class="form-group">
+    <label>Country</label>
+    <%= f.select(:country, [['North America', 'North America'], ['South America', 'South America'], ['Asia', 'Asia'], ['Europe', 'Europe'], ['Africa', 'Africa'], ['Australia', 'Australia']], {}, { :class => 'form-control' }) %>
+    
+  </div>
+  <div class="form-group">
+    <label>Combobox</label>    
+    <%= f.select(:combobox, [['Option A', 'Option A'], ['Option B', 'Option B'], ['Option C', 'Option C'], ['Option D', 'Option D']], {}, { :class => 'form-control' })  %>
+  </div>
+
+  <div class="form-actions">
+    <button type="Submit" class="btn btn-success">Submit</button>
+    <%= link_to 'Cancel', users_path, class: 'btn btn-default' %>
+  </div>
+<% end %>
