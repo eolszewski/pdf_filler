@@ -11,12 +11,13 @@ class PdfForm2 < FillablePdfForm
     fill :TextField6, @user.name
     fill :TextField7, @user.address
     fill :TextField8, @user.date_of_birth.to_s
-    fill :Group1, 'default-value-0'
-    fill :CheckBox16, 'Yes'
-    fill :CheckBox15, 'Yes'
+    fill :Group1, @user.us_citizon
+    fill :CheckBox15, @user.is_item_a ? 'Yes' : 'Off'
+    fill :CheckBox16, @user.is_item_b ? 'Yes' : 'Off'
+    fill :CheckBox17, @user.is_item_c ? 'Yes' : 'Off'
 
-    fill :ComboBox23, 'Option B'
-    fill :ListBox22, 'Australia'
+    fill :ComboBox23, @user.combobox
+    fill :ListBox22, @user.country
 
   end
 end
