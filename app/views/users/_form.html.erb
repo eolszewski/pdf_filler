@@ -8,11 +8,11 @@
   </div>
   <div class="form-group">
     <label >Address</label>
-    <%= f.text_field :address, class: 'form-control col-sm-12' %> 
+    <%= f.text_field :address, class: 'form-control' %> 
   </div>
   <div class="form-group">
     <label >Date of birth</label>
-    <%= f.text_field :date_of_birth, class: 'form-control col-sm-12', placeholder: '' %> 
+    <%= f.text_field :date_of_birth, class: 'form-control datepicker ', placeholder: '' %> 
   </div>
   <div class="form-group">
     <label>US Citizon</label>
@@ -45,3 +45,6 @@
     <%= link_to 'Cancel', users_path, class: 'btn btn-default' %>
   </div>
 <% end %>
+<script type="text/javascript">
+    $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
+</script>
