@@ -32,8 +32,8 @@ development:
   database: pdf_filler_dev
   pool: 5
   host: localhost
-  username: postgres
-  password: password
+  username: ericolszewski
+  password: root
 
 production:
   adapter: postgresql
@@ -50,8 +50,8 @@ test: &test
   database: pdf_filler_test
   pool: 5
   host: localhost
-  username: postgres
-  password: password
+  username: ericolszewski
+  password: root
 
 cucumber:
   <<: *test
