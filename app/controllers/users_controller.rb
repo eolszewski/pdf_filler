@@ -39,8 +39,33 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.pdf { send_file PdfForm2.new(@user).export('form2.pdf'), type: 'application/pdf' }
       format.html
-    end    
+    end
   end
+
+  def download_i_9_pdf
+    @user = User.find(params[:user_id])
+    respond_to do |format|
+      format.pdf { send_file I_9Pdf.new(@user).export('i-9.pdf'), type: 'application/pdf' }
+      format.html
+    end
+  end
+
+  def download_form1_pdf
+    @user = User.find(params[:user_id])
+    respond_to do |format|
+      format.pdf { send_file PdfForm1.new(@user).export('form1.pdf'), type: 'application/pdf' }
+      format.html
+    end
+  end
+
+  def download_form2_pdf
+    @user = User.find(params[:user_id])
+    respond_to do |format|
+      format.pdf { send_file PdfForm2.new(@user).export('form2.pdf'), type: 'application/pdf' }
+      format.html
+    end
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
