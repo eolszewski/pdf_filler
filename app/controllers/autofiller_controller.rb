@@ -33,10 +33,10 @@ class AutofillerController < ApplicationController
   # end
 
   def index
-    @users = User.all
-    I9 = I9Pdf.new(User.new)    
-    @fields = I9.get_field_names
-    @field_values = I9.get_fields
+    # @users = User.all
+    # I9 = I9Pdf.new(User.new)    
+    # @fields = I9.get_field_names
+    # @field_values = I9.get_fields
   end
 
 
