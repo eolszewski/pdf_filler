@@ -45,8 +45,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'bootstrap-sass'
+
+gem "bootstrap-sass", "~> 3.1.1.0"
 gem "font-awesome-rails"
+gem 'bootstrap-datepicker-rails'
+
+gem 'sass-rails', '~> 4.0.0'
 gem 'aws-sdk'
 gem 'paperclip'
 gem 'pdftk'

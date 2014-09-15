@@ -18,6 +18,10 @@ class FillablePdfForm
     pdftk.get_field_names template_path
   end
 
+  def get_fields
+    pdftk.get_fields template_path
+  end
+  
   def template_path
     @template_path ||= "#{Rails.root}/lib/pdf_templates/#{self.class.name.gsub('Pdf', '').underscore}.pdf" # makes assumption about template file path unless otherwise specified
   end

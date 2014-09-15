@@ -31,7 +31,9 @@ GEM
     aws-sdk-v1 (1.52.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
-    bootstrap-sass (3.2.0.2)
+    bootstrap-datepicker-rails (1.3.0.2)
+      railties (>= 3.0)
+    bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.1.4)
     climate_control (0.0.3)
@@ -132,7 +134,8 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
-  bootstrap-sass
+  bootstrap-datepicker-rails
+  bootstrap-sass (~> 3.1.1.0)
   coffee-rails (~> 4.0.0)
   font-awesome-rails
   jbuilder (~> 1.2)

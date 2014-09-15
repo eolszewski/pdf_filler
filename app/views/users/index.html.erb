@@ -1,0 +1,29 @@
+<h3 class="page-title"> User Index </h3>
+
+<div class="content">  
+  <%= link_to 'New User', new_user_path, class: 'btn btn-primary' %>
+  <table class="table">    
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Birthday</th>
+        <th>Actions</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.name, user_path(user.id)%></td>
+          <td><%= user.address %></td>
+          <td><%= user.date_of_birth %></td>
+          <td><%= link_to '<i class="fa fa-file-pdf-o"></i> PDF'.html_safe, user_path(user.id, :format => :pdf) %>  <%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_user_path(user) %></td>           
+          <td><%= link_to '<i class="fa fa-remove"></i> Destroy'.html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }
+%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
