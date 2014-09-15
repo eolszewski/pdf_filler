@@ -48,6 +48,14 @@ class UsersController < ApplicationController
       format.html
     end
   end
+  
+  def download_i9_pdf
+    @user = User.find(params[:user_id])
+    respond_to do |format|
+      format.pdf { send_file I9Pdf.new(@user).export('i9.pdf'), type: 'application/pdf' }
+      format.html
+    end
+  end
 
   def download_form1_pdf
     @user = User.find(params[:user_id])

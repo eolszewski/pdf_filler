@@ -8,10 +8,10 @@ PdfFiller::Application.routes.draw do
 
   resources :autofiller
   resources :users do     
-    get 'download_i_9_pdf'
+    #get 'download_i_9_pdf'
+    get 'download_i9_pdf'
     get 'download_form1_pdf'
     get 'download_form2_pdf'    
-
   end
 
 end
