@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    
     if @user.save
       redirect_to action: 'index'      
     else
@@ -25,7 +24,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    
+
     if @user.update_attributes(user_params)
       redirect_to action: 'index'      
     else
@@ -37,7 +36,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     respond_to do |format|
-      format.pdf { send_file PdfForm2.new(@user).export('form2.pdf'), type: 'application/pdf' }
+      format.pdf { send_file I9Pdf.new(@user).export('i9.pdf'), type: 'application/pdf' }
       format.html
     end
   end
@@ -74,7 +73,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :address, :date_of_birth, :us_citizon, :is_item_a, :is_item_b, :is_item_c, :country, :combobox)
+    params.require(:user).permit(:name, :address, :date_of_birth, :us_citizen, :is_item_a, :is_item_b, :is_item_c, :state, :combobox, :social_security, :zipcode, :email, :telephone, :city)
   end
 
 

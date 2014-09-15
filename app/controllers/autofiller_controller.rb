@@ -10,7 +10,7 @@ class AutofillerController < ApplicationController
   def show
     user = User.find(params[:id])
     respond_to do |format|
-      format.pdf { send_file PdfForm2.new(user).export('form2.pdf'), type: 'application/pdf' }
+      format.pdf { send_file I9Pdf.new(user).export('i9.pdf'), type: 'application/pdf' }
     end
   end
 
@@ -34,9 +34,9 @@ class AutofillerController < ApplicationController
 
   def index
     @users = User.all
-    form2 = PdfForm2.new(User.new)    
-    @fields = form2.get_field_names
-    @field_values = form2.get_fields
+    I9 = I9Pdf.new(User.new)    
+    @fields = I9.get_field_names
+    @field_values = I9.get_fields
   end
 
 
