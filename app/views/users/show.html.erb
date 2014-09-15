@@ -1,36 +1,61 @@
-<h3> User Information</h3>
+<h3>User Information</h3>
 
 <div class="content">
   <div class="form-horizontal">
     <div class="form-group">
       <label class="control-label">Name:  <%= @user.name %></label>      
     </div>
+
     <div class="form-group">
       <label class="control-label">Address: <%= @user.address %> </label>
     </div>
+
     <div class="form-group">
-      <label class="control-label">Birthday: <%= @user.date_of_birth %> </label>
-    </div>
-    <div class="form-group">
-      <label class="control-label">US Citizon: <%= @user.us_citizon == 'default-value-0'  ? 'Yes' : 'No' %> </label>
+      <label class="control-label">City: <%= @user.city %> </label>
     </div>
 
     <div class="form-group">
-      <label class="control-label">Item A: <%= @user.is_item_a ? 'Yes' : 'No' %> </label>
-    </div>
-    <div class="form-group">
-      <label class="control-label">Item B: <%= @user.is_item_b ? 'Yes' : 'No' %> </label>
-    </div>
-    <div class="form-group">
-      <label class="control-label">Item C: <%= @user.is_item_c ? 'Yes' : 'No' %> </label>
+      <label class="control-label">State: <%= @user.state %> </label>
     </div>
 
     <div class="form-group">
-      <label class="control-label">Country: <%= @user.country %> </label>
+      <label class="control-label">Zip Code: <%= @user.zipcode %> </label>
     </div>
+
     <div class="form-group">
+      <label class="control-label">Date of Birth: <%= @user.date_of_birth.strftime("%m/%d/%Y") %> </label>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label">U.S. Social Security Number: <%= @user.social_security %> </label>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label">E-mail Address: <%= @user.email %> </label>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label">Telephone Number: <%= @user.telephone %> </label>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">US Citizen: <%= @user.us_citizen?  ? 'Yes' : 'No' %> </label>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">A noncitizen national of the United States : <%= @user.is_item_a ? 'Yes' : 'No' %> </label>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">A lawful permanent resident: <%= @user.is_item_b ? 'Yes' : 'No' %> </label>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">An alien authorized to work until a certain date: <%= @user.is_item_c ? 'Yes' : 'No' %> </label>
+    </div>
+<!--     <div class="form-group">
       <label class="control-label">Combo Box: <%= @user.combobox %> </label>
-    </div>
+    </div> -->
 
   </div>
   <%= link_to 'Back', users_path, class: 'btn btn-default' %>

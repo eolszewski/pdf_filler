@@ -7,22 +7,36 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-user1 = User.find_or_create_by(name: "James Dae") do |u| 
-  u.address = 'New York'
-  u.date_of_birth = Time.now - 1.month
+user1 = User.find_or_create_by(name: "Olszewski, Eric A") do |u| 
+	u.address = '106 Franklin Blvd, Unit A'
+	u.date_of_birth = '08/08/1992'
+	u.us_citizen = true
+	u.is_item_a = false
+	u.is_item_b = false
+	u.is_item_c = false
+	u.state = "TX"
+	u.combobox = nil
+	u.social_security = "678234123"
+	u.zipcode = "78751"
+	u.email = "eolszewski@gmail.com"
+	u.telephone = "7138258982"
+	u.city = "Austin"
 end
 
-user2 = User.find_or_create_by(name: "John Dansebee") do |u| 
-  u.address = 'Moscow'
-  u.date_of_birth = Time.now - 2.month - 4.day
+user2 = User.find_or_create_by(name: "Sischo, Samantha R") do |u| 
+	u.address = '808 W 29th St, Apt #204'
+	u.date_of_birth = '12/07/1991'
+	u.us_citizen = true
+	u.is_item_a = false
+	u.is_item_b = false
+	u.is_item_c = false
+	u.state = "TX"
+	u.combobox = nil
+	u.social_security = "123451234"
+	u.zipcode = "78705"
+	u.email = "s.sischo@gmail.com"
+	u.telephone = "9142398080"
+	u.city = "Austin"
 end
 
-user3 = User.find_or_create_by(name: "Alex Podolsky") do |u| 
-  u.address = 'Amsterdam'
-  u.date_of_birth = Time.now - 7.month - 9.day
-end
 
-user4 = User.find_or_create_by(name: "Frank David") do |u| 
-  u.address = 'Poland'
-  u.date_of_birth = Time.now - 4.month - 11.day
-end
